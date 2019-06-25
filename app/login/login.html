@@ -7,22 +7,25 @@
                     <h1 class="h3 mb-3">התחברות</h1>
                 </div>
             </div>
+            <div class="alert alert-danger" role="alert" ng-show="invalidLogin">
+                    <strong>כניסה נכשלה!</strong> דואר אלקטרוני או סיסמא שגויים
+                </div>
             <div class="form-group row">
                 <label for="email" class="col-sm-2 col-form-label">דוא"ל</label>
                 <div class="col-sm-10">
-                    <input type="email" class="form-control" id="email" placeholder="הכנס כתובת דואר אלקטרוני"
+                    <input type="email" class="form-control" id="email" ng-model="email" placeholder="הכנס כתובת דואר אלקטרוני"
                         required>
                 </div>
             </div>
             <div class="form-group row">
                 <label for="pwd" class="col-sm-2 col-form-label">סיסמא</label>
                 <div class="col-sm-10">
-                    <input type="password" class="form-control" id="pwd" placeholder="הכנס סיסמא" required>
+                    <input type="password" class="form-control" id="pwd" ng-model="pwd" placeholder="הכנס סיסמא" required>
                 </div>
             </div>
             <div class="form-group row">
                 <div class="mx-auto">
-                    <button type="submit" class="btn btn-dark">חברו אותי</button>
+                    <button type="submit" class="btn btn-dark" ng-click="login()">חברו אותי</button>
                 </div>
             </div>
         </form>
