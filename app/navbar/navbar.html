@@ -28,7 +28,10 @@
                 <a class="nav-link" href="#" ng-hide="isLoggedIn()">הרשם</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link"  ng-show="isLoggedIn()" >שלום {{getActiveUser().userName}}</a>
+                <a class="nav-link"  ng-show="isLoggedIn()" >שלום {{getActiveUser().fname}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" ng-show="isLoggedIn()" ng-click="logout()">התנתק</a>
