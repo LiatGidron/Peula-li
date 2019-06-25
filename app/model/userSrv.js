@@ -2,10 +2,11 @@ app.factory("userSrv", function ($q, $http) {
     var activeUser = null;
 
     function User(plainUser) {
-        this.id = plainUser.id;
+        this.userName = plainUser.userName;
         this.fname = plainUser.fname;
         this.lname = plainUser.lname;
         this.email = plainUser.email;
+        this.youthMovement = plainUser.youthMovement;
     }
 
 
@@ -19,28 +20,37 @@ app.factory("userSrv", function ($q, $http) {
         var async = $q.defer();
 
         activeUser = null;
-        $http.get("app/model/data/users.json").then(function(res) {
+        $http.get("app/model/data/users.json").then(function (res) {
             var users = res.data;
             for (var i = 0; i < users.length && !activeUser; i++) {
                 if (email === users[i].email && pwd === users[i].pwd) {
                     activeUser = new User(users[i]);
                     async.resolve(activeUser);
-                } 
+                }
             }
             if (!activeUser) {
                 async.reject(401);
             }
-        }, function(err) {
+        }, function (err) {
             async.reject(err);
         })
 
         return async.promise;
     }
 
+    function logout() {
+        activeUser = null;
+    }
+
+    function getActiveUser() {
+        return activeUser;
+    }
 
     return {
         isLoggedIn: isLoggedIn,
-        login: login
+        login: login,
+        logout: logout,
+        getActiveUser: getActiveUser
     }
 
 

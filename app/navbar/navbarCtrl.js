@@ -1,7 +1,13 @@
-app.controller("navbarCtrl", function($scope) {
+app.controller("navbarCtrl", function($scope, userSrv, $location) {
 
     $scope.isLoggedIn = function() {
-        return false;
+        return userSrv.isLoggedIn();
     }
-
+    $scope.logout = function() {
+        userSrv.logout();
+        $location.path("/");
+    }
+    $scope.getActiveUser = function(){
+        return userSrv.getActiveUser(); 
+    }
 }) 
