@@ -1,0 +1,20 @@
+[
+    {
+        "userName": "ליאת.גדרון",
+        "fname": "ליאת",
+        "lname": "גדרון",
+        "email": "gidron.liat@gmail.com",
+        "pwd": "123",
+        "youthMovement": "הצופים",
+        "userRank" : ""
+    },
+    {
+        "userName": "אורי.גדרון",
+        "fname": "אורי",
+        "lname": "גדרון",
+        "email": "ori.gdr22@gmail.com",
+        "pwd": "123",
+        "youthMovement": "חוגי סיור",
+        "userRank" : ""
+    }
+] 
