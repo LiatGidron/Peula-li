@@ -14,18 +14,21 @@
                 <a class="nav-link" href="#">מאגר הפעולות</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">הוספת פעולה</a>
+                <a class="nav-link" href="#" ng-show="isLoggedIn()">הוספת פעולה</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">הפעולות שלי</a>
+                <a class="nav-link" href="#" ng-show="isLoggedIn()">הפעולות שלי</a>
             </li>
         </ul>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-                <a class="nav-link" href="#">התחבר</a>
+                <a class="nav-link" href="#" ng-hide="isLoggedIn()">התחבר</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">הרשם</a>
+                <a class="nav-link" href="#" ng-hide="isLoggedIn()">הרשם</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" ng-show="isLoggedIn()">התנתק</a>
             </li>
         </ul>
 
