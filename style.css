@@ -2,3 +2,10 @@ body {
     direction: rtl;
     text-align: right;
 }
+.container.login {
+    max-width: 500px; 
+    margin-top: 80px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
