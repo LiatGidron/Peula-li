@@ -1,0 +1,73 @@
+<div>
+    <peula-li-navbar></peula-li-navbar>
+    <div class="container login">
+        <form>
+            <div class="form-group row">
+                <div class="mx-auto">
+                    <h1 class="h3 mb-3">רישום לפעולה-לי</h1>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="email" class="col-sm-3 col-form-label">דוא"ל:</label>
+                <div class="col-sm-9">
+                    <input type="email" class="form-control" id="email" ng-model="email"
+                        placeholder="הכנס כתובת דואר אלקטרוני" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="pwd" class="col-sm-3 col-form-label">סיסמא:</label>
+                <div class="col-sm-9">
+                    <input type="password" class="form-control" id="pwd" ng-model="pwd" placeholder="הכנס סיסמא"
+                        required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="userName" class="col-sm-3 col-form-label">שם משתמש:</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="userName" ng-model="userName"
+                        placeholder="הכנס שם משתמש" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="fname" class="col-sm-3 col-form-label">שם פרטי:</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="fname" ng-model="fname" placeholder="הכנס שם פרטי"
+                        required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="lname" class="col-sm-3 col-form-label">שם משפחה:</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="lname" ng-model="lname" placeholder="הכנס שם משפחה"
+                        required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="youthMovement" class="col-sm-3 col-form-label">תנועת נוער:</label>
+                <div class="col-sm-9">
+                    <select class="form-control" id="youthMovement" ng-model="youthMovement">
+                        <option>הצופים</option>
+                        <option>הנוער העובד והלומד</option>
+                        <option>בני עקיבא</option>
+                        <option>המחנות העולים</option>
+                        <option>השומר הצעיר</option>
+                        <option>מכבי צעיר</option>
+                        <option>הנוער הלאומי – בית"ר</option>
+                        <option>עזרא</option>
+                        <option>האיחוד החקלאי</option>
+                        <option>אריאל</option>
+                        <option>הצופים הערבים והדרוזים</option>
+                        <option>תנועת הנוער הדרוזי</option>
+                        <option>היכלי ענ"ג</option>
+                        <option>CISV</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mx-auto text-center">
+                <button type="submit" class="btn btn-dark" ng-click=signup()>רשמו אותי</button>
+            </div>
+    </div>
+
+    </form>
+</div>
+</div>

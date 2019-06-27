@@ -1,4 +1,4 @@
-var app = angular.module("peulaLiApp", ["ngRoute"]);
+var app = angular.module("peulaLiApp", ["ngRoute", "ngAnimate", "ngTouch", "ui.bootstrap"]);
 
 app.config(function($routeProvider) {
     $routeProvider.when("/", {
@@ -7,7 +7,8 @@ app.config(function($routeProvider) {
         templateUrl: "app/login/login.html",
         controller: "loginCtrl"
     }).when ("/signup", {
-        
+        templateUrl: "app/signup/signup.html",
+        controller: "signupCtrl"        
     }).when ("/activities", {
         
     }).when ("/newActivity", {

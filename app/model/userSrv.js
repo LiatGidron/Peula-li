@@ -9,6 +9,20 @@ app.factory("userSrv", function ($q, $http) {
         this.youthMovement = plainUser.youthMovement;
     }
 
+    var users = [];
+    function addUser(userName, fname, lname, email, pwd, youthMovement) {
+        var plainUser = {
+            "userName": userName,
+            "fname": fname,
+            "lname": lname,
+            "email": email,
+            "pwd": pwd,
+            "youthMovement": youthMovement
+        }
+        var newUser = new User(plainUser);
+        users.push(newUser);
+        return newUser;
+    }
 
     function isLoggedIn() {
         return activeUser ? true : false;
@@ -50,7 +64,8 @@ app.factory("userSrv", function ($q, $http) {
         isLoggedIn: isLoggedIn,
         login: login,
         logout: logout,
-        getActiveUser: getActiveUser
+        getActiveUser: getActiveUser,
+        addUser: addUser
     }
 
 
