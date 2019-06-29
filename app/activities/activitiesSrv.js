@@ -1,4 +1,4 @@
-app.factory("activitiesSrv", function(){
+app.factory("activitiesSrv", function($q, $http, $log){
 
     function Activity(activityId,createdBy,createDate,activityName,activityAge,activityLength,activityLocation,
         levelOfActive,activityGoals,activityShortDesc,activityFullDesc,activityResources,activityExtFiles,activityGeoLocation,activityTags,activityRank) {
@@ -32,7 +32,7 @@ app.factory("activitiesSrv", function(){
             }
             async.resolve(activities);
         }, function (err) {
-            console.error(err);
+            $log.error(err);
             async.reject(err);
         });
         return async.promise;

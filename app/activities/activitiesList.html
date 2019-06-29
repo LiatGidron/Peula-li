@@ -1,3 +1,13 @@
-<div>
-    
+<div class="container">
+    <uib-accordion close-others="oneAtATime">
+        <div uib-accordion-group class="mt-1" ng-repeat="activity in activities">
+            <uib-accordion-heading>
+                <div>{{activity.activityName}}</div>
+                <div>here I can add stuff like rank - {{activity.activityRank}}</div>
+                <button class="btn btn-success">לחצו עלי</button>
+            </uib-accordion-heading>
+            <div>{{activity.activityShortDesc}} </div>
+        </div>
+    </uib-accordion>
+
 </div>

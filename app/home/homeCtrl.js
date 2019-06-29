@@ -1,6 +1,8 @@
-app.controller("homeCtrl", function($scope, activitiesSrv) {
+app.controller("homeCtrl", function ($scope, activitiesSrv, $log) {
 
-    $scope.getActivities = function(){
-        return activitiesSrv.getActivities(); 
-    }
+    activitiesSrv.getActivities().then(function (activities) {
+        $scope.activities = activities;
+    }, function (err) {
+        $log.error(err);
+    });
 })
