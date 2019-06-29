@@ -59,7 +59,8 @@
         "activityResources" : "כוס גואש שחור, ירוק וצהוב, אלבד או בד ערבי, חבלים, נייר עיתון",
         "activityExtFiles" : "",
         "activityGeoLocation" : "",
-        "activityTags" : ["צבא", "הסוואה", "כבוד", "משמעת", "צהל"]
+        "activityTags" : ["צבא", "הסוואה", "כבוד", "משמעת", "צהל"],
+        "activityRank" : 3
     },
     {
         "activityId": 2,
@@ -121,7 +122,8 @@
         "activityResources" : "כוס גואש שחור, ירוק וצהוב, אלבד או בד ערבי, חבלים, נייר עיתון",
         "activityExtFiles" : "",
         "activityGeoLocation" : "",
-        "activityTags" : ["צבא", "הסוואה", "כבוד", "משמעת", "ישראל"]
+        "activityTags" : ["צבא", "הסוואה", "כבוד", "משמעת", "ישראל"],
+        "activityRank" : 4
     },{
         "activityId": 3,
         "createdBy": "ליאת.גדרון",
@@ -182,7 +184,8 @@
         "activityResources" : "כוס גואש שחור, ירוק וצהוב, אלבד או בד ערבי, חבלים, נייר עיתון",
         "activityExtFiles" : "",
         "activityGeoLocation" : "",
-        "activityTags" : ["צבא", "הסוואה", "כבוד", "משמעת", "צהל", "ישראל"]
+        "activityTags" : ["צבא", "הסוואה", "כבוד", "משמעת", "צהל", "ישראל"],
+        "activityRank" : 2
     },{
         "activityId": 4,
         "createdBy": "ליאת.גדרון",
@@ -243,7 +246,8 @@
         "activityResources" : "כוס גואש שחור, ירוק וצהוב, אלבד או בד ערבי, חבלים, נייר עיתון",
         "activityExtFiles" : "",
         "activityGeoLocation" : "",
-        "activityTags" : ["צבא", "הסוואה", "כבוד", "משמעת", "צהל"]
+        "activityTags" : ["צבא", "הסוואה", "כבוד", "משמעת", "צהל"],
+        "activityRank" : 5
     },{
         "activityId": 5,
         "createdBy": "ליאת.גדרון",
@@ -304,7 +308,8 @@
         "activityResources" : "כוס גואש שחור, ירוק וצהוב, אלבד או בד ערבי, חבלים, נייר עיתון",
         "activityExtFiles" : "",
         "activityGeoLocation" : "",
-        "activityTags" : ["צבא", "הסוואה", "כבוד", "משמעת", "צהל", "גיוס"]
+        "activityTags" : ["צבא", "הסוואה", "כבוד", "משמעת", "צהל", "גיוס"],
+        "activityRank" : 3
     },{
         "activityId": 6,
         "createdBy": "אורי.גדרון",
@@ -365,6 +370,7 @@
         "activityResources" : "כוס גואש שחור, ירוק וצהוב, אלבד או בד ערבי, חבלים, נייר עיתון",
         "activityExtFiles" : "",
         "activityGeoLocation" : "",
-        "activityTags" : ["צבא", "הסוואה", "כבוד", "משמעת", "צהל"]
+        "activityTags" : ["צבא", "הסוואה", "כבוד", "משמעת", "צהל"],
+        "activityRank" : 1
     }
 ]
