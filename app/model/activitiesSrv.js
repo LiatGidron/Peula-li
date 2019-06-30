@@ -19,8 +19,9 @@ app.factory("activitiesSrv", function($q, $http, $log){
         this.activityTags = activityTags;
         this.activityRank = activityRank;
     }
-    var activities = [];
+   
     function getActivities() {
+        var activities = [];
         var async = $q.defer();
         $http.get("app/model/data/activities.json").then(function (res) {
             for (var i = 0; i < res.data.length; i++) {
