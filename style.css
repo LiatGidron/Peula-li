@@ -9,3 +9,16 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+.middle {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.search-box {
+    border: 1px solid #ccc; 
+    margin: 10px;
+    padding: 10px;
+}

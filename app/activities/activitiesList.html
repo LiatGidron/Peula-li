@@ -1,12 +1,26 @@
-<div class="container">
+<div class="container activities-list">
     <uib-accordion close-others="oneAtATime">
-        <div uib-accordion-group class="mt-1" ng-repeat="activity in activities">
+        <div uib-accordion-group class="mt-1" ng-repeat="activity in activities | orderBy : '-activityRank'">
             <uib-accordion-heading>
-                <div>{{activity.activityName}}</div>
-                <div>here I can add stuff like rank - {{activity.activityRank}}</div>
-                <button class="btn btn-success">לחצו עלי</button>
+                <div class="row">
+                    <div class="col-sm">{{activity.activityName}}</div>
+                    <div class="col-sm">דירוג: {{activity.activityRank}}</div>
+                    <div class="col-sm">עורך: {{activity.createdBy}}</div>
+                    <div class="col-sm-2"><button class="btn btn-success">לדף הפעולה</button></div>
+                </div>
             </uib-accordion-heading>
-            <div>{{activity.activityShortDesc}} </div>
+            <div class="row">
+                <div class="col-sm">גיל: {{activity.activityAge}}</div>
+                <div class="col-sm">אורך: {{activity.activityLength}}</div>
+                <div class="col-sm">מיקום: {{activity.activityLocation}}</div>
+                <div class="col-sm">רמת אקטיביות: {{activity.levelOfActive}}</div>
+            </div>
+            <div class="row middle">
+                <div class="col">{{activity.activityShortDesc}}</div>
+            </div>
+            <div class="row">
+               <span>תגיות: &nbsp;</span> <div ng-repeat="tags in activity.activityTags">{{tags}} {{$last ? '' : ', '}}</div>
+            </div>
         </div>
     </uib-accordion>
 
