@@ -1,13 +1,130 @@
 <div>
     <peula-li-navbar></peula-li-navbar>
     <div class="">
-        <form class="search-box" >
-            <div class="row">
-                <div>
-                    <label for="subject">נושא:</label>
-                    <input type="text" class="form-control" id="subject">
+        <form class="search-box">
+            <div class="row mx-auto">
+                <div class="col-md-2 col-sm-4 sub-search subject-search">
+                    <div class="form-group">
+                        <label for="subject">נושא:</label>
+                        <input type="text" class="form-control" id="subject">
+                    </div>
                 </div>
+                <div class="col-md-2 col-sm-4 sub-search age-search">
+                    <label for="">גיל:</label>
+                    <div>
+                        <div class="form-check-inline">
+                            <input type="checkbox" class="" value="">
+                            <label class="form-check-label">כיתות ג' </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <input type="checkbox" class="" value="">
+                            <label class="form-check-label">כיתות ז' </label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-check-inline">
+                            <input type="checkbox" class="" value="">
+                            <label class="form-check-label">כיתות ד' </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <input type="checkbox" class="" value="">
+                            <label class="form-check-label">כיתות ח' </label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-check-inline">
+                            <input type="checkbox" class="" value="">
+                            <label class="form-check-label">כיתות ה'</label>
+                        </div>
+                        <div class="form-check-inline">
+                            <input type="checkbox" class="" value="">
+                            <label class="form-check-label">כיתות ט' </label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-check-inline">
+                            <input type="checkbox" class="" value="">
+                            <label class="form-check-label">כיתות ו' </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <input type="checkbox" class="" value="">
+                            <label class="form-check-label">בוגרים</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 sub-search length-search">
+                    <div class="form-group">
+                        <label for="sel1">אורך הפעולה:</label>
+                        <select class="form-control" id="sel1">
+                            <option>עד חצי שעה</option>
+                            <option>שעה</option>
+                            <option>שעה וחצי</option>
+                            <option>שעתיים</option>
+                            <option>שעתיים וחצי</option>
+                            <option>שלוש שעות</option>
+                            <option>מעל שלוש שעות</option>
+                        </select>
+                    </div>
 
+                </div>
+                <div class="col-md-2 col-sm-4 sub-search location-search">
+                    <label for="">מיקום:</label>
+                    <div class="form-check">
+                        <input type="radio" class="" name="optradio">
+                        <label class="form-check-label">פעולת חוץ</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="" name="optradio">
+                        <label class="form-check-label">פעולת פנים</label>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 sub-search active-level-search">
+                    <label for="">רמת אקטיביות:</label>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="" value="">
+                        <label class="form-check-label">1 - פאסיבית</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="" value="">
+                        <label class="form-check-label">2</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="" value="">
+                        <label class="form-check-label">3</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="" value="">
+                        <label class="form-check-label">4</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="" value="">
+                        <label class="form-check-label">5 - אקטיבית</label>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 sub-search youthmovement-search">
+                    <div class="form-group">
+                        <label for="sel2">תנועת נוער:</label>
+                        <select class="form-control" id="sel2">
+                            <option>בחר...</option>
+                            <option>הצופים</option>
+                            <option>הנוער העובד והלומד</option>
+                            <option>בני עקיבא</option>
+                            <option>המחנות העולים</option>
+                            <option>השומר הצעיר</option>
+                            <option>מכבי צעיר</option>
+                            <option>הנוער הלאומי – בית"ר</option>
+                            <option>עזרא</option>
+                            <option>האיחוד החקלאי</option>
+                            <option>אריאל</option>
+                            <option>הצופים הערבים והדרוזים</option>
+                            <option>תנועת הנוער הדרוזי</option>
+                            <option>היכלי ענ"ג</option>
+                            <option>CISV</option>
+                        </select>
+                    </div>
+
+                </div>
             </div>
         </form>
     </div>
