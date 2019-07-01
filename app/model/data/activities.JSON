@@ -59,7 +59,7 @@
         "activityResources" : "כוס גואש שחור, ירוק וצהוב, אלבד או בד ערבי, חבלים, נייר עיתון",
         "activityExtFiles" : "",
         "activityGeoLocation" : "",
-        "activityTags" : ["צבא", "הסוואה", "כבוד", "משמעת", "צהל"],
+        "activityTags" : ["צבא", "הסוואה", "משמעת", "צהל"],
         "activityRank" : 3
     },
     {
@@ -122,7 +122,7 @@
         "activityResources" : "כוס גואש שחור, ירוק וצהוב, אלבד או בד ערבי, חבלים, נייר עיתון",
         "activityExtFiles" : "",
         "activityGeoLocation" : "",
-        "activityTags" : ["צבא", "הסוואה", "כבוד", "משמעת", "ישראל"],
+        "activityTags" : ["צבא", "הסוואה", "משמעת", "ישראל"],
         "activityRank" : 4
     },{
         "activityId": 3,
@@ -130,8 +130,8 @@
         "createDate": "2018-08-05",
         "activityName": "ישראל",
         "activityAge": "כיתות ז",
-        "activityLength": "שעתיים",
-        "activityLocation" : "חוץ",
+        "activityLength": "שלוש שעות",
+        "activityLocation" : "פנים",
         "levelOfActive" : "3",
         "activityGoals" : "הבנת חשיבות הצבא למדינת ישראל, כיבוד המדריך וחברי הקבוצה, הבנת המושג משמעת, יישום השירדות בטבע על ידי הסוואהץ",
         "activityShortDesc" : "פעולה בנושא הצבא תוך שימת דגש על עקרונות עבודת צוות, עמידה בזמנים, הגעה על מדים וכו'. להדגמת הישרדות החיילים בצהל הפעולה תועבר בסגנון טירונות וסגנון צבאי. ",
@@ -184,7 +184,7 @@
         "activityResources" : "כוס גואש שחור, ירוק וצהוב, אלבד או בד ערבי, חבלים, נייר עיתון",
         "activityExtFiles" : "",
         "activityGeoLocation" : "",
-        "activityTags" : ["צבא", "הסוואה", "כבוד", "משמעת", "צהל", "ישראל"],
+        "activityTags" : ["צבא", "הסוואה", "משמעת", "צהל", "ישראל"],
         "activityRank" : 2
     },{
         "activityId": 4,
@@ -316,7 +316,7 @@
         "createDate": "2018-08-11",
         "activityName": "צבא",
         "activityAge": "כיתות ח",
-        "activityLength": "חצי שעה",
+        "activityLength": "עד חצי שעה",
         "activityLocation" : "חוץ",
         "levelOfActive" : "4",
         "activityGoals" : "הבנת חשיבות הצבא למדינת ישראל, כיבוד המדריך וחברי הקבוצה, הבנת המושג משמעת, יישום השירדות בטבע על ידי הסוואהץ",

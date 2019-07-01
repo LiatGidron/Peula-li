@@ -1,6 +1,7 @@
 <div class="container activities-list">
     <uib-accordion close-others="oneAtATime">
-        <div uib-accordion-group class="mt-1" ng-repeat="activity in activities | filter : filterBySubject |filter:filterByLength| orderBy : '-activityRank'">
+        <div uib-accordion-group class="mt-1" ng-repeat="activity in activities | filter : filterBySubject |
+        filter:filterByLength| filter: filterByLocation | filter: filterByAge | orderBy : '-activityRank'">
             <uib-accordion-heading>
                 <div class="row">
                     <div class="col-sm">{{activity.activityName}}</div>
