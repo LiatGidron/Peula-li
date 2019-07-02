@@ -38,7 +38,9 @@ app.factory("activitiesSrv", function($q, $http, $log){
         });
         return async.promise;
     }
+
+ 
     return {
         getActivities: getActivities
-    }
+        }
     })

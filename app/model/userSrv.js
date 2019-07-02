@@ -68,7 +68,8 @@ app.factory("userSrv", function ($q, $http) {
         login: login,
         logout: logout,
         getActiveUser: getActiveUser,
-        addUser: addUser
+        addUser: addUser,
+        users:users
     }
 
 

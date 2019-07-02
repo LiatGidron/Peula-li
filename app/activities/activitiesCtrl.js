@@ -1,10 +1,11 @@
-app.controller("activitiesCtrl", function ($scope, activitiesSrv, $log) {
+app.controller("activitiesCtrl", function ($scope, activitiesSrv, $log, userSrv) {
 
     activitiesSrv.getActivities().then(function (activities) {
         $scope.activities = activities;
     }, function (err) {
         $log.error(err);
     });
+
     $scope.query="";
     $scope.filterBySubject = function(activity) {
         if(activity.activityName.includes($scope.query) || activity.activityTags.includes($scope.query)) {
@@ -23,7 +24,6 @@ app.controller("activitiesCtrl", function ($scope, activitiesSrv, $log) {
             return false; 
         }
     }
-    // $scope.location = "";
     $scope.filterByLocation = function(activity){
         if ($scope.location===undefined) {
             return true
@@ -46,4 +46,25 @@ app.controller("activitiesCtrl", function ($scope, activitiesSrv, $log) {
            return false;
        }
    }
+
+   $scope.levelsOfActive = [];
+   $scope.includeLevelOfActive = function(level) {
+       $scope.levelsOfActive.push(level); 
+   }
+  $scope.filterByLevelOfActive = function(activity) {
+   if ($scope.levelsOfActive=="") {
+       return true
+   } else if ($scope.levelsOfActive.indexOf(activity.levelOfActive)!==-1) {
+          return true;
+      } else {
+          return false;
+      }
+  }
+
+
+//   $scope.getYouthmovementOfUser = function(createdBy){
+//     var x = userSrv.users.filter(user=>user.userName===createdBy);
+//     return x.youthMovement;
+// }
+
 })
