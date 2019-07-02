@@ -12,6 +12,7 @@ app.controller("signupCtrl", function ($scope, userSrv, $log, $location) {
              $log.info("new user added: " + JSON.stringify(activeUser));
              $location.path("/");
             }, function (err) {
+                $log.error(err);
                 $scope.invalidLogin = true;
     
         });

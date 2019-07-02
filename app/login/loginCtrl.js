@@ -9,6 +9,7 @@ app.controller("loginCtrl", function ($scope, $location, userSrv, $log) {
             $log.info("Successful login with: " + JSON.stringify(activeUser));
             $location.path("/");
         }, function (err) {
+            $log.error(err);
             $scope.invalidLogin = true;
 
         });
