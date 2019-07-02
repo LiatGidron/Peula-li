@@ -1,7 +1,26 @@
+@font-face {
+    Font-family: "yehuda-light"; 	 
+    Src: url("app/model/fonts/yehudaclm-light-webfont.ttf");
+    }
+@font-face {
+    Font-family: "yehuda-bold"; 	 
+    Src: url("app/model/fonts/yehudaclm-bold-webfont.ttf");
+    }
+@font-face {
+    Font-family: "carmela"; 	 
+    Src: url("app/model/fonts/carmela.ttf");
+    }
+@font-face {
+    Font-family: "varela"; 	 
+    Src: url("app/model/fonts/VarelaRound-Regular.ttf");
+    }
+    
 body {
     direction: rtl;
     text-align: right;
     margin-bottom: 20px;
+    font-family: varela;
+    /* font-size: 1.2rem; */
 }
 .container.login {
     max-width: 600px; 
@@ -42,4 +61,7 @@ form.new-activity-form > .row, .activity-desc {
 }
 .activity-desc > .row, .activity-desc > div >.row {
     padding-top: 5px;
+}
+img.float-right {
+    margin-left: 50px;
 }
