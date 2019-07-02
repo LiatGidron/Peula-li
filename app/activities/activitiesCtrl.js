@@ -1,4 +1,4 @@
-app.controller("activitiesCtrl", function ($scope, activitiesSrv, $log /*,userSrv*/) {
+app.controller("activitiesCtrl", function ($scope, activitiesSrv, $log, userSrv) {
 
     activitiesSrv.getActivities().then(function (activities) {
         $scope.activities = activities;

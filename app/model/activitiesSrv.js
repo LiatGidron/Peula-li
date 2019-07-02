@@ -1,4 +1,4 @@
-app.factory("activitiesSrv", function ($q, $http, $log) {
+app.factory("activitiesSrv", function ($q, $http, userSrv) {
 
     var activities = [];
     var wasEverLoadedFromJSON = false;
@@ -48,34 +48,34 @@ app.factory("activitiesSrv", function ($q, $http, $log) {
         }
     }
 
-        function addNewActivity(activityName, activityAge, activityLength, activityLocation, levelOfActive, activityGoals,
-            activityShortDesc, activityFullDesc, activityResources, activityExtFiles, activityTags) {
-            var async = $q.defer();
-            var activeUserName = userSrv.getActiveUser().userName;
-            var plainActivity = {
-                "activityId": nextActivityId,
-                "createdBy": activeUserName,
-                "activityName": activityName,
-                "activityAge": activityAge,
-                "activityLength": activityLength,
-                "activityLocation": activityLocation,
-                "levelOfActive": levelOfActive,
-                "activityGoals": activityGoals,
-                "activityShortDesc": activityShortDesc,
-                "activityFullDesc": activityFullDesc,
-                "activityResources": activityResources,
-                "activityExtFiles": activityExtFiles,
-                "activityTags": activityTags
-            }
-            var newActivity = new Activity(plainActivity);
-            activities.push(newActivity);
-            ++nextActivityId;
-            async.resolve(newActivity);
-            return async.promise;
+    function addNewActivity(activityName, activityAge, activityLength, activityLocation, levelOfActive, activityGoals,
+        activityShortDesc, activityFullDesc, activityResources, activityExtFiles, activityTags) {
+        var async = $q.defer();
+        var activeUserName = userSrv.getActiveUser().userName;
+        var plainActivity = {
+            "activityId": nextActivityId,
+            "createdBy": activeUserName,
+            "activityName": activityName,
+            "activityAge": activityAge,
+            "activityLength": activityLength,
+            "activityLocation": activityLocation,
+            "levelOfActive": levelOfActive,
+            "activityGoals": activityGoals,
+            "activityShortDesc": activityShortDesc,
+            "activityFullDesc": activityFullDesc,
+            "activityResources": activityResources,
+            "activityExtFiles": activityExtFiles,
+            "activityTags": activityTags
         }
+        var newActivity = new Activity(plainActivity);
+        activities.push(newActivity);
+        ++nextActivityId;
+        async.resolve(newActivity);
+        return async.promise;
+    }
 
-        return {
-            getActivities: getActivities,
-            addNewActivity: addNewActivity
-        }
-    })
+    return {
+        getActivities: getActivities,
+        addNewActivity: addNewActivity
+    }
+})

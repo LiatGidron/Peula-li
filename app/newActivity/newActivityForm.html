@@ -7,13 +7,13 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="subject">שם הפעולה (נושא):</label>
-                        <input type="text" class="form-control" id="subject">
+                        <input type="text" class="form-control" id="subject" ng-model="activityName">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="tags">תגיות:</label>
-                        <input type="text" class="form-control" id="tags"
+                        <input type="text" class="form-control" id="tags" ng-model="activityTags"
                             placeholder='ללא #, הפרדה ע"י פסיקים, צמדי מילים עם מקף ללא רווחים'>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label for="age">גיל החניכים:</label>
-                        <select class="form-control" id="age">
+                        <select class="form-control" id="age" ng-model="activityAge">
                             <option>בחר...</option>
                             <option>כיתות ג'</option>
                             <option>כיתות ד'</option>
@@ -38,7 +38,7 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label for="length">אורך הפעולה:</label>
-                        <select class="form-control" id="length">
+                        <select class="form-control" id="length" ng-model="activityLength">
                             <option>עד חצי שעה</option>
                             <option>שעה</option>
                             <option>שעה וחצי</option>
@@ -52,7 +52,7 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label for="location">מיקום:</label>
-                        <select class="form-control" id="location">
+                        <select class="form-control" id="location" ng-model="activityLocation">
                             <option>פנים</option>
                             <option>חוץ</option>
                         </select>
@@ -61,7 +61,7 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label for="levelOfActive">רמת אקטיביות:</label>
-                        <select class="form-control" id="levelOfActive">
+                        <select class="form-control" id="levelOfActive" ng-model="levelOfActive">
                             <option>1 - פאסיבית</option>
                             <option>2</option>
                             <option>3</option>
@@ -75,13 +75,13 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="shortDesc">תאור קצר:</label>
-                        <textarea class="form-control" rows="2" id="shortDesc"></textarea>
+                        <textarea class="form-control" rows="2" id="shortDesc" ng-model="shortDesc"></textarea>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="activitGoals">מטרות הפעולה:</label>
-                        <textarea class="form-control" rows="2" id="activitGoals"></textarea>
+                        <textarea class="form-control" rows="2" id="activitGoals" ng-model="activityGoals"></textarea>
                     </div>
                 </div>
             </div>
@@ -235,7 +235,7 @@
                 <div class="col-md-5">
                     <div class="form-group">
                         <label for="activityResources">חומר עזר נדרש:</label>
-                        <textarea class="form-control" rows="1" id="activityResources"></textarea>
+                        <textarea class="form-control" rows="1" id="activityResources" ng-model="activityResources"></textarea>
                     </div>
                 </div>
                 <div class="col-md-5">
@@ -245,7 +245,7 @@
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <button class="btn btn-success btn-block btn-lg h-100">הוסף פעולה</button>
+                    <button class="btn btn-success btn-block btn-lg h-100" ng-click = "addActivity()">הוסף פעולה</button>
                 </div>
             </div>
         </form>
