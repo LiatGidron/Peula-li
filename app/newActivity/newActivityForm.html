@@ -1,0 +1,253 @@
+<div>
+    <peula-li-navbar></peula-li-navbar>
+    <div class="container">
+        <h3>שלום {{getActiveUser().fname}} - כמה נהדר שבחרת להוסיף פעולה למאגר!</h3>
+        <form class="new-activity-form">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="subject">נושא הפעולה:</label>
+                        <input type="text" class="form-control" id="subject">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="tags">תגיות:</label>
+                        <input type="text" class="form-control" id="tags"
+                            placeholder='ללא #, הפרדה ע"י פסיקים, צמדי מילים עם מקף ללא רווחים'>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="age">גיל החניכים:</label>
+                        <select class="form-control" id="age">
+                            <option>בחר...</option>
+                            <option>כיתות ג'</option>
+                            <option>כיתות ד'</option>
+                            <option>כיתות ה'</option>
+                            <option>כיתות ו'</option>
+                            <option>כיתות ז'</option>
+                            <option>כיתות ח'</option>
+                            <option>כיתות ט'</option>
+                            <option>בוגרים</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="length">אורך הפעולה:</label>
+                        <select class="form-control" id="length">
+                            <option>עד חצי שעה</option>
+                            <option>שעה</option>
+                            <option>שעה וחצי</option>
+                            <option>שעתיים</option>
+                            <option>שעתיים וחצי</option>
+                            <option>שלוש שעות</option>
+                            <option>מעל שלוש שעות</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="location">מיקום:</label>
+                        <select class="form-control" id="location">
+                            <option>פנים</option>
+                            <option>חוץ</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="levelOfActive">רמת אקטיביות:</label>
+                        <select class="form-control" id="levelOfActive">
+                            <option>1 - פאסיבית</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 - אקטיבית</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="shortDesc">תאור קצר:</label>
+                        <textarea class="form-control" rows="2" id="shortDesc"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="activitGoals">מטרות הפעולה:</label>
+                        <textarea class="form-control" rows="2" id="activitGoals"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="activity-desc">
+                <label>תאור הפעולה:</label>
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="step1Length">שלב 1 - אורך <small>(בדקות)</small>:</label>
+                    </div>
+                    <div class="col-md-1">
+                        <input type="number" id="step1Length" class="form-control">
+                    </div>
+                    <div class="col-md-1">
+                        <label for="step1Desc">תאור:</label>
+                    </div>
+                    <div class="col-md-8">
+                        <textarea type="text" class="form-control" id="step1Desc" rows="1"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="step2Length">שלב 2 - אורך <small>(בדקות)</small>:</label>
+                    </div>
+                    <div class="col-md-1">
+                        <input type="number" id="step2Length" class="form-control">
+                    </div>
+                    <div class="col-md-1">
+                        <label for="step2Desc">תאור:</label>
+                    </div>
+                    <div class="col-md-8">
+                        <textarea type="text" class="form-control" id="step2Desc" rows="1"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="step3Length">שלב 3 - אורך <small>(בדקות)</small>:</label>
+                    </div>
+                    <div class="col-md-1">
+                        <input type="number" id="step3Length" class="form-control">
+                    </div>
+                    <div class="col-md-1">
+                        <label for="step3Desc">תאור:</label>
+                    </div>
+                    <div class="col-md-8">
+                        <textarea type="text" class="form-control" id="step3Desc" rows="1"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="step4Length">שלב 4 - אורך <small>(בדקות)</small>:</label>
+                    </div>
+                    <div class="col-md-1">
+                        <input type="number" id="step4Length" class="form-control">
+                    </div>
+                    <div class="col-md-1">
+                        <label for="step4Desc">תאור:</label>
+                    </div>
+                    <div class="col-md-8">
+                        <textarea type="text" class="form-control" id="step4Desc" rows="1"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="step5Length">שלב 5 - אורך <small>(בדקות)</small>:</label>
+                    </div>
+                    <div class="col-md-1">
+                        <input type="number" id="step5Length" class="form-control">
+                    </div>
+                    <div class="col-md-1">
+                        <label for="step5Desc">תאור:</label>
+                    </div>
+                    <div class="col-md-8">
+                        <textarea type="text" class="form-control" id="step5Desc" rows="1"></textarea>
+                    </div>
+                </div>
+                <p><a href="" ng-click="isVisible=!isVisible">הוסף שלבים</a></p>
+                <div ng-show="isVisible">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="step6Length">שלב 6 - אורך <small>(בדקות)</small>:</label>
+                        </div>
+                        <div class="col-md-1">
+                            <input type="number" id="step6Length" class="form-control">
+                        </div>
+                        <div class="col-md-1">
+                            <label for="step6Desc">תאור:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <textarea type="text" class="form-control" id="step6Desc" rows="1"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="step7Length">שלב 7 - אורך <small>(בדקות)</small>:</label>
+                        </div>
+                        <div class="col-md-1">
+                            <input type="number" id="step7Length" class="form-control">
+                        </div>
+                        <div class="col-md-1">
+                            <label for="step7Desc">תאור:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <textarea type="text" class="form-control" id="step7Desc" rows="1"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="step8Length">שלב 8 - אורך <small>(בדקות)</small>:</label>
+                        </div>
+                        <div class="col-md-1">
+                            <input type="number" id="step8Length" class="form-control">
+                        </div>
+                        <div class="col-md-1">
+                            <label for="step8Desc">תאור:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <textarea type="text" class="form-control" id="step8Desc" rows="1"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="step9Length">שלב 9 - אורך <small>(בדקות)</small>:</label>
+                        </div>
+                        <div class="col-md-1">
+                            <input type="number" id="step9Length" class="form-control">
+                        </div>
+                        <div class="col-md-1">
+                            <label for="step9Desc">תאור:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <textarea type="text" class="form-control" id="step9Desc" rows="1"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="step10Length">שלב 10 - אורך <small>(בדקות)</small>:</label>
+                        </div>
+                        <div class="col-md-1">
+                            <input type="number" id="step10Length" class="form-control">
+                        </div>
+                        <div class="col-md-1">
+                            <label for="step10Desc">תאור:</label>
+                        </div>
+                        <div class="col-md-8">
+                            <textarea type="text" class="form-control" id="step10Desc" rows="1"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label for="activityResources">חומר עזר נדרש:</label>
+                        <textarea class="form-control" rows="1" id="activityResources"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label for="activityExtFiles">קבצים מצורפים:</label>
+                        <input class="form-control" type="file" id="activityExtFiles">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-success btn-block btn-lg h-100">הוסף פעולה</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

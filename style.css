@@ -1,6 +1,7 @@
 body {
     direction: rtl;
     text-align: right;
+    margin-bottom: 20px;
 }
 .container.login {
     max-width: 600px; 
@@ -30,4 +31,15 @@ label.form-check-label {
 }
 .sub-search {
     border: 1px dashed #ccc;
+}
+.new-activity-form {
+    margin-top: 20px;
+}
+form.new-activity-form > .row, .activity-desc {
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    border-bottom: 1px dashed rgb(255, 153, 153);
+}
+.activity-desc > .row, .activity-desc > div >.row {
+    padding-top: 5px;
 }
