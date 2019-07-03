@@ -1,4 +1,4 @@
-app.controller("activitiesCtrl", function ($scope, activitiesSrv, $log, userSrv) {
+app.controller("activitiesCtrl", function ($scope, activitiesSrv, $log, $location) {
 
     activitiesSrv.getActivities().then(function (activities) {
         $scope.activities = activities;
@@ -88,4 +88,8 @@ app.controller("activitiesCtrl", function ($scope, activitiesSrv, $log, userSrv)
         $scope.levelsOfActive = [];
         $scope.youthMovement = undefined;
     };
+    
+  $scope.openActivityPage = function(activityId) {
+    $location.path("/activities/" + activityId);
+  }
 })

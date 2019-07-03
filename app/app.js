@@ -18,5 +18,8 @@ app.config(function($routeProvider) {
         controller: "newActivityCtrl"  
     }).when ("/myActivities", {
         
+    }).when ("/activities/:id", {
+        templateUrl: "app/activities/activityPage.html",
+        controller: "activityPageCtrl"  
     })
 })
