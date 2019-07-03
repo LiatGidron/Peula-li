@@ -83,23 +83,23 @@
                     <label for="">רמת אקטיביות:</label>
 
                     <div class="form-check">
-                        <input type="checkbox" ng-click="includeLevelOfActive(1)">
+                        <input type="checkbox" ng-click="includeLevelOfActive(1)" ng-checked="levelsOfActive.includes(1)">
                         <label class="form-check-label">1 - פאסיבית</label>
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" ng-click="includeLevelOfActive(2)">
+                        <input type="checkbox" ng-click="includeLevelOfActive(2)" ng-checked="levelsOfActive.includes(2)">
                         <label class="form-check-label">2</label>
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" ng-click="includeLevelOfActive(3)">
+                        <input type="checkbox" ng-click="includeLevelOfActive(3)" ng-checked="levelsOfActive.includes(3)">
                         <label class="form-check-label">3</label>
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" ng-click="includeLevelOfActive(4)">
+                        <input type="checkbox" ng-click="includeLevelOfActive(4)" ng-checked="levelsOfActive.includes(4)">
                         <label class="form-check-label">4</label>
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" ng-click="includeLevelOfActive(5)">
+                        <input type="checkbox" ng-click="includeLevelOfActive(5)" ng-checked="levelsOfActive.includes(5)">
                         <label class="form-check-label">5 - אקטיבית</label>
                     </div>
                 </div>
@@ -107,7 +107,6 @@
                     <div class="form-group">
                         <label for="sel2">תנועת נוער:</label>
                         <select class="form-control" id="sel2" ng-model="youthMovement">
-                            <option>בחר...</option>
                             <option>הצופים</option>
                             <option>חוגי סיור</option>
                             <option>הנוער העובד והלומד</option>
@@ -125,7 +124,7 @@
                             <option>CISV</option>
                         </select>
                     </div>
-                    <button class="btn btn-dark btn-block" ng-click="">נקה טופס</button>
+                    <button class="btn btn-dark btn-block" ng-click="clearFilter()">נקה טופס</button>
                 </div>
             </div>
         </form>

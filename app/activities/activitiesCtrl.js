@@ -69,5 +69,14 @@ app.controller("activitiesCtrl", function ($scope, activitiesSrv, $log, userSrv)
     } else {
         return false; 
     }
-}
+    }
+
+    $scope.clearFilter = function() {
+        $scope.query = "";
+        $scope.length= undefined;
+        $scope.location=undefined; 
+        $scope.ages=[];
+        $scope.levelsOfActive=[];
+        $scope.youthMovement=undefined;
+      };
 })
