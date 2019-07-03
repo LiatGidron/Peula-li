@@ -61,10 +61,13 @@ app.controller("activitiesCtrl", function ($scope, activitiesSrv, $log, userSrv)
       }
   }
 
-
-//   $scope.getYouthmovementOfUser = function(createdBy){
-//     var x = userSrv.users.filter(user=>user.userName===createdBy);
-//     return x.youthMovement;
-// }
-
+  $scope.filterByYouthMovement = function(activity){
+    if ($scope.youthMovement===undefined) {
+        return true
+    } else if(activity.youthMovement === $scope.youthMovement) {
+        return true;
+    } else {
+        return false; 
+    }
+}
 })

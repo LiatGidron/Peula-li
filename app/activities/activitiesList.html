@@ -1,13 +1,13 @@
 <div class="container activities-list">
     <uib-accordion close-others="oneAtATime">
         <div uib-accordion-group class="mt-1" ng-repeat="activity in activities | filter : filterBySubject |
-        filter:filterByLength| filter: filterByLocation | filter: filterByAge | filter: filterByLevelOfActive | orderBy : '-activityRank'">
+        filter:filterByLength| filter: filterByLocation | filter: filterByAge | filter: filterByLevelOfActive | 
+        filter: filterByYouthMovement | orderBy : '-activityRank'">
             <uib-accordion-heading>
                 <div class="row">
                     <div class="col-sm">{{activity.activityName}}</div>
                     <div class="col-sm">דירוג: {{activity.activityRank}}</div>
-                    <div class="col-sm">עורך: {{activity.createdBy}}</div>
-                    <!-- <div class="col-sm">תנועת נוער: {{getYouthmovementOfUser(activity.createdBy)}}</div> -->
+                    <div class="col-sm">עורך: {{activity.createdBy}} ({{activity.youthMovement}})</div>
                     <div class="col-sm-2"><button class="btn btn-success">לדף הפעולה</button></div>
                 </div>
             </uib-accordion-heading>

@@ -17,14 +17,24 @@
                             <label class="form-check-label">כיתות ג' </label>
                         </div>
                         <div class="form-check-inline">
-                            <input type="checkbox" ng-click="includeAge('כיתות ז')">
-                            <label class="form-check-label">כיתות ז' </label>
+                            <input type="checkbox" ng-click="includeAge('כיתות ד')">
+                            <label class="form-check-label">כיתות ד' </label>
                         </div>
                     </div>
                     <div>
                         <div class="form-check-inline">
-                            <input type="checkbox" ng-click="includeAge('כיתות ד')">
-                            <label class="form-check-label">כיתות ד' </label>
+                            <input type="checkbox" ng-click="includeAge('כיתות ה')">
+                            <label class="form-check-label">כיתות ה' </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <input type="checkbox" ng-click="includeAge('כיתות ו')">
+                            <label class="form-check-label">כיתות ו' </label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-check-inline">
+                            <input type="checkbox" ng-click="includeAge('כיתות ז')">
+                            <label class="form-check-label">כיתות ז'</label>
                         </div>
                         <div class="form-check-inline">
                             <input type="checkbox" ng-click="includeAge('כיתות ח')">
@@ -33,18 +43,8 @@
                     </div>
                     <div>
                         <div class="form-check-inline">
-                            <input type="checkbox" ng-click="includeAge('כיתות ה')">
-                            <label class="form-check-label">כיתות ה'</label>
-                        </div>
-                        <div class="form-check-inline">
                             <input type="checkbox" ng-click="includeAge('כיתות ט')">
                             <label class="form-check-label">כיתות ט' </label>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="form-check-inline">
-                            <input type="checkbox" ng-click="includeAge('כיתות ו')">
-                            <label class="form-check-label">כיתות ו' </label>
                         </div>
                         <div class="form-check-inline">
                             <input type="checkbox" ng-click="includeAge('בוגרים')">
@@ -106,9 +106,10 @@
                 <div class="col-md-2 col-sm-4 sub-search youthmovement-search">
                     <div class="form-group">
                         <label for="sel2">תנועת נוער:</label>
-                        <select class="form-control" id="sel2">
+                        <select class="form-control" id="sel2" ng-model="youthMovement">
                             <option>בחר...</option>
                             <option>הצופים</option>
+                            <option>חוגי סיור</option>
                             <option>הנוער העובד והלומד</option>
                             <option>בני עקיבא</option>
                             <option>המחנות העולים</option>
@@ -124,7 +125,7 @@
                             <option>CISV</option>
                         </select>
                     </div>
-
+                    <button class="btn btn-dark btn-block" ng-click="">נקה טופס</button>
                 </div>
             </div>
         </form>

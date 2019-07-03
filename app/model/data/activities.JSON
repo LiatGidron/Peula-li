@@ -2,6 +2,7 @@
     {
         "activityId": 1,
         "createdBy": "ליאת.גדרון",
+        "youthMovement": "הצופים",
         "createDate": "2018-08-11",
         "activityName": "צבא",
         "activityAge": "כיתות ד",
@@ -65,6 +66,7 @@
     {
         "activityId": 2,
         "createdBy": "אורי.גדרון",
+        "youthMovement": "חוגי סיור",
         "createDate": "2017-12-11",
         "activityName": "צבא",
         "activityAge": "כיתות ה",
@@ -127,6 +129,7 @@
     },{
         "activityId": 3,
         "createdBy": "ליאת.גדרון",
+        "youthMovement": "הצופים",
         "createDate": "2018-08-05",
         "activityName": "ישראל",
         "activityAge": "כיתות ז",
@@ -189,6 +192,7 @@
     },{
         "activityId": 4,
         "createdBy": "ליאת.גדרון",
+        "youthMovement": "הצופים",
         "createDate": "2017-05-11",
         "activityName": "סתם ניסיון",
         "activityAge": "כיתות ז",
@@ -251,6 +255,7 @@
     },{
         "activityId": 5,
         "createdBy": "ליאת.גדרון",
+        "youthMovement": "הצופים",
         "createDate": "2019-02-04",
         "activityName": "צבא",
         "activityAge": "בוגרים",
@@ -313,6 +318,7 @@
     },{
         "activityId": 6,
         "createdBy": "אורי.גדרון",
+        "youthMovement": "חוגי סיור",
         "createDate": "2018-08-11",
         "activityName": "צבא",
         "activityAge": "כיתות ח",
