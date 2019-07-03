@@ -51,10 +51,10 @@ label.form-check-label {
 .sub-search {
     border: 1px dashed #ccc;
 }
-.new-activity-form {
+.new-activity-form, .activity-page {
     margin-top: 20px;
 }
-form.new-activity-form > .row, .activity-desc {
+form.new-activity-form > .row, .activity-desc, .activity-page > .row {
     margin-top: 10px; 
     margin-bottom: 10px; 
     border-bottom: 1px dashed rgb(255, 153, 153);

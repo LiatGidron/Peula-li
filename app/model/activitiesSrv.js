@@ -74,8 +74,23 @@ app.factory("activitiesSrv", function ($q, $http, userSrv) {
         return async.promise;
     }
 
+    function getActivityById(activityId) {
+        var async = $q.defer();
+        getActivities().then(function(activities) {
+            for (var i=0; i<activities.length; i++) {
+                if (activities[i].activityId == activityId) {
+                    async.resolve(activities[i]);
+                }
+            }          
+        }, function(err) {
+          async.reject(err);
+        })
+        return async.promise;
+      }
+
     return {
         getActivities: getActivities,
-        addNewActivity: addNewActivity
+        addNewActivity: addNewActivity,
+        getActivityById:getActivityById
     }
 })

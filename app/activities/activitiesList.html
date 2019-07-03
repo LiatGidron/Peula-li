@@ -8,7 +8,6 @@
                     <div class="col-sm">{{activity.activityName}}</div>
                     <div class="col-sm">דירוג: {{activity.activityRank}}</div>
                     <div class="col-sm">עורך: {{activity.createdBy}} ({{activity.youthMovement}})</div>
-                    <div class="col-sm-2"><button class="btn btn-success" ng-click="openActivityPage(activity.activityId)">לדף הפעולה</button></div>
                 </div>
             </uib-accordion-heading>
             <div class="row">
@@ -16,12 +15,17 @@
                 <div class="col-sm">אורך: {{activity.activityLength}}</div>
                 <div class="col-sm">מיקום: {{activity.activityLocation}}</div>
                 <div class="col-sm">רמת אקטיביות: {{activity.levelOfActive}}</div>
+                <div class="col-sm">
+                    <button class="btn btn-success" ng-click="openActivityPage(activity.activityId)">לדף הפעולה</button>
+                </div>
             </div>
             <div class="row middle">
                 <div class="col">{{activity.activityShortDesc}}</div>
             </div>
             <div class="row">
-                <span>&nbsp &nbsp תגיות: &nbsp;</span> <div ng-repeat="tags in activity.activityTags">{{tags}} {{$last ? '' : ', '}}</div>
+                <span>&nbsp &nbsp תגיות: &nbsp;</span>
+                <div ng-repeat="tags in activity.activityTags">{{tags}} {{$last ? '' : ', '}}</div>
+
             </div>
         </div>
     </uib-accordion>
