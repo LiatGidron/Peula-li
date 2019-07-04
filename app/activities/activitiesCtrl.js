@@ -1,4 +1,4 @@
-app.controller("activitiesCtrl", function ($scope, activitiesSrv, $log, $location) {
+app.controller("activitiesCtrl", function ($scope, activitiesSrv, $log, $location, $uibModal, userSrv) {
 
     activitiesSrv.getActivities().then(function (activities) {
         $scope.activities = activities;
@@ -88,8 +88,23 @@ app.controller("activitiesCtrl", function ($scope, activitiesSrv, $log, $locatio
         $scope.levelsOfActive = [];
         $scope.youthMovement = undefined;
     };
-    
-  $scope.openActivityPage = function(activityId) {
-    $location.path("/activities/" + activityId);
-  }
+
+    $scope.isLoggedIn = function() {
+        return userSrv.isLoggedIn();
+    }
+
+    $scope.openModal = function () {
+        $uibModal.open({
+            templateUrl: "app/activities/modal/needToLoginModal.html",
+            controller: "needToLoginModalCtrl"
+        });
+    }
+
+    $scope.openActivityPage = function (activityId) {
+        if ( $scope.isLoggedIn()==false) {
+            $scope.openModal();
+        } else {
+        $location.path("/activities/" + activityId);
+    }
+}
 })
