@@ -14,19 +14,24 @@ app.controller("newActivityCtrl", function($scope, userSrv, activitiesSrv, $log,
     $scope.activityResources = ""; 
     $scope.extFiles = "";
     $scope.activityTags = ""; 
-    $scope.step1Length = "";
-    $scope.step2Length = "";
-    $scope.step1Desc = "";
-    $scope.step2Desc = "";
+    $scope.activityFullDesc = [
+        {
+            stepLength:undefined, 
+            stepDesc:""
+        }
+    ];
     
-    
+   $scope.insertStep = function () {
+        $scope.activityFullDesc.push( {
+            stepLength:undefined, 
+            stepDesc:""
+        });
+    };
 
     $scope.addActivity = function() {
-        // $scope.fullDesc = function(step1Length,step1Desc, step2Length,step2Desc){
-        //     return [{step1Length, step1Desc }, {step2Length, step2Desc}];
-        // }
-        activitiesSrv.addNewActivity($scope.activityName, $scope.activityAge, $scope.activityLength, $scope.activityLocation, $scope.levelOfActive, $scope.activityGoals,
-        $scope.shortDesc, $scope.fullDesc, $scope.activityResources, $scope.extFiles, $scope.activityTags).then(function(newActivity){
+        activitiesSrv.addNewActivity($scope.activityName, $scope.activityAge, $scope.activityLength, 
+            $scope.activityLocation, $scope.levelOfActive, $scope.activityGoals, $scope.shortDesc, 
+            $scope.activityFullDesc, $scope.activityResources, $scope.extFiles, $scope.activityTags).then(function(newActivity){
             $log.info("new activity added: " + JSON.stringify(newActivity));
             $location.path("/activities");
         })

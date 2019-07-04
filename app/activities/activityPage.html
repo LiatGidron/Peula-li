@@ -46,13 +46,13 @@
             </div>
         </div>
         <div>
-            <div class="row">
-                <div class="col-md-2">שלב 1 - אורך <small>(בדקות)</small>:</div>
-                <div class="col-md-1">{{activity.activityFullDesc[0].step1Length}}</div>
+            <div class="row" ng-repeat = "step in activity.activityFullDesc">
+                <div class="col-md-2">שלב {{$index+1}} - אורך:</div>
+                <div class="col-md-1">{{step.stepLength}} <small>דקות</small></div>
                 <div class="col-md-1">תאור:</div>
-                <div class="col-md">{{activity.activityFullDesc[0].step1Desc}}</div>
+                <div class="col-md">{{step.stepDesc}}</div>
             </div>
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-md-2">שלב 2 - אורך <small>(בדקות)</small>:</div>
                 <div class="col-md-1">{{activity.activityFullDesc[1].step2Length}}</div>
                 <div class="col-md-1">תאור:</div>
@@ -105,7 +105,7 @@
                 <div class="col-md-1">{{activity.activityFullDesc[9].step10Length}}</div>
                 <div class="col-md-1">תאור:</div>
                 <div class="col-md">{{activity.activityFullDesc[9].step10Desc}}</div>
-            </div>
+            </div> -->
         </div>
         <div class="row"></div>
 

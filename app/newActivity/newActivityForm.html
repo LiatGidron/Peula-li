@@ -86,155 +86,29 @@
             </div>
             <div class="activity-desc">
                 <label>תאור הפעולה:</label>
-                <div class="row">
+                <div class="row" ng-repeat="step in activityFullDesc">
                     <div class="col-md-2">
-                        <label for="step1Length">שלב 1 - אורך <small>(בדקות)</small>:</label>
+                        <label for="stepLength">שלב {{$index+1}} - אורך <small>(בדקות)</small>:</label>
                     </div>
                     <div class="col-md-1">
-                        <input type="number" id="step1Length" class="form-control" ng-model="step1Length">
+                        <input type="number" id="stepLength" class="form-control" ng-model="step.stepLength">
                     </div>
                     <div class="col-md-1">
-                        <label for="step1Desc">תאור:</label>
+                        <label for="stepDesc">תאור:</label>
                     </div>
                     <div class="col-md-8">
-                        <textarea type="text" class="form-control" id="step1Desc" ng-model="step1Desc" rows="1"></textarea>
+                        <textarea type="text" class="form-control" id="stepDesc" ng-model="step.stepDesc"
+                            rows="2"></textarea>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-2">
-                        <label for="step2Length">שלב 2 - אורך <small>(בדקות)</small>:</label>
-                    </div>
-                    <div class="col-md-1">
-                        <input type="number" id="step2Length" class="form-control" ng-model="step2Length">
-                    </div>
-                    <div class="col-md-1">
-                        <label for="step2Desc">תאור:</label>
-                    </div>
-                    <div class="col-md-8">
-                        <textarea type="text" class="form-control" id="step2Desc" ng-model="step2Desc" rows="1"></textarea>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2">
-                        <label for="step3Length">שלב 3 - אורך <small>(בדקות)</small>:</label>
-                    </div>
-                    <div class="col-md-1">
-                        <input type="number" id="step3Length" class="form-control">
-                    </div>
-                    <div class="col-md-1">
-                        <label for="step3Desc">תאור:</label>
-                    </div>
-                    <div class="col-md-8">
-                        <textarea type="text" class="form-control" id="step3Desc" rows="1"></textarea>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2">
-                        <label for="step4Length">שלב 4 - אורך <small>(בדקות)</small>:</label>
-                    </div>
-                    <div class="col-md-1">
-                        <input type="number" id="step4Length" class="form-control">
-                    </div>
-                    <div class="col-md-1">
-                        <label for="step4Desc">תאור:</label>
-                    </div>
-                    <div class="col-md-8">
-                        <textarea type="text" class="form-control" id="step4Desc" rows="1"></textarea>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2">
-                        <label for="step5Length">שלב 5 - אורך <small>(בדקות)</small>:</label>
-                    </div>
-                    <div class="col-md-1">
-                        <input type="number" id="step5Length" class="form-control">
-                    </div>
-                    <div class="col-md-1">
-                        <label for="step5Desc">תאור:</label>
-                    </div>
-                    <div class="col-md-8">
-                        <textarea type="text" class="form-control" id="step5Desc" rows="1"></textarea>
-                    </div>
-                </div>
-                <p><a href="" ng-click="isVisible=!isVisible">הוסף שלבים</a></p>
-                <div ng-show="isVisible">
-                    <div class="row">
-                        <div class="col-md-2">
-                            <label for="step6Length">שלב 6 - אורך <small>(בדקות)</small>:</label>
-                        </div>
-                        <div class="col-md-1">
-                            <input type="number" id="step6Length" class="form-control">
-                        </div>
-                        <div class="col-md-1">
-                            <label for="step6Desc">תאור:</label>
-                        </div>
-                        <div class="col-md-8">
-                            <textarea type="text" class="form-control" id="step6Desc" rows="1"></textarea>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2">
-                            <label for="step7Length">שלב 7 - אורך <small>(בדקות)</small>:</label>
-                        </div>
-                        <div class="col-md-1">
-                            <input type="number" id="step7Length" class="form-control">
-                        </div>
-                        <div class="col-md-1">
-                            <label for="step7Desc">תאור:</label>
-                        </div>
-                        <div class="col-md-8">
-                            <textarea type="text" class="form-control" id="step7Desc" rows="1"></textarea>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2">
-                            <label for="step8Length">שלב 8 - אורך <small>(בדקות)</small>:</label>
-                        </div>
-                        <div class="col-md-1">
-                            <input type="number" id="step8Length" class="form-control">
-                        </div>
-                        <div class="col-md-1">
-                            <label for="step8Desc">תאור:</label>
-                        </div>
-                        <div class="col-md-8">
-                            <textarea type="text" class="form-control" id="step8Desc" rows="1"></textarea>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2">
-                            <label for="step9Length">שלב 9 - אורך <small>(בדקות)</small>:</label>
-                        </div>
-                        <div class="col-md-1">
-                            <input type="number" id="step9Length" class="form-control">
-                        </div>
-                        <div class="col-md-1">
-                            <label for="step9Desc">תאור:</label>
-                        </div>
-                        <div class="col-md-8">
-                            <textarea type="text" class="form-control" id="step9Desc" rows="1"></textarea>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2">
-                            <label for="step10Length">שלב 10 - אורך <small>(בדקות)</small>:</label>
-                        </div>
-                        <div class="col-md-1">
-                            <input type="number" id="step10Length" class="form-control">
-                        </div>
-                        <div class="col-md-1">
-                            <label for="step10Desc">תאור:</label>
-                        </div>
-                        <div class="col-md-8">
-                            <textarea type="text" class="form-control" id="step10Desc" rows="1"></textarea>
-                        </div>
-                    </div>
-                </div>
+                <p ng-click="insertStep()"><a href="">הוסף שלב</a></p>
             </div>
             <div class="row">
                 <div class="col-md-5">
                     <div class="form-group">
                         <label for="activityResources">חומר עזר נדרש:</label>
-                        <textarea class="form-control" rows="1" id="activityResources" ng-model="activityResources"></textarea>
+                        <textarea class="form-control" rows="1" id="activityResources"
+                            ng-model="activityResources"></textarea>
                     </div>
                 </div>
                 <div class="col-md-5">
@@ -244,7 +118,7 @@
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <button class="btn btn-success btn-block btn-lg h-100" ng-click = "addActivity()">הוסף פעולה</button>
+                    <button class="btn btn-success btn-block btn-lg h-100" ng-click="addActivity()">הוסף פעולה</button>
                 </div>
             </div>
         </form>
