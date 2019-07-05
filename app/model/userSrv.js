@@ -62,6 +62,7 @@ app.factory("userSrv", function ($q, $http) {
     function getActiveUser() {
         return activeUser;
     }
+    
 
     return {
         isLoggedIn: isLoggedIn,

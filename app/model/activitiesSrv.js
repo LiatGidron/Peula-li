@@ -41,7 +41,7 @@ app.factory("activitiesSrv", function ($q, $http, userSrv) {
                 wasEverLoadedFromJSON = false;
                 async.reject(err);
             });
-            
+
         }
         return async.promise;
     }
@@ -76,21 +76,39 @@ app.factory("activitiesSrv", function ($q, $http, userSrv) {
 
     function getActivityById(activityId) {
         var async = $q.defer();
-        getActivities().then(function(activities) {
-            for (var i=0; i<activities.length; i++) {
+        getActivities().then(function (activities) {
+            for (var i = 0; i < activities.length; i++) {
                 if (activities[i].activityId == activityId) {
                     async.resolve(activities[i]);
                 }
-            }          
-        }, function(err) {
-          async.reject(err);
+            }
+        }, function (err) {
+            async.reject(err);
         })
         return async.promise;
-      }
+    }
+
+    function getUserActivities() {
+        var async = $q.defer();
+        var activeUserName = userSrv.getActiveUser().userName;
+        var userActivities = [];
+        getActivities().then(function (activities) {
+            for (var i = 0; i < activities.length; i++) {
+                if (activities[i].createdBy == activeUserName) {
+                    userActivities.push(activities[i])
+                }
+            } 
+            async.resolve(userActivities);
+        }, function (err) {
+            async.reject(err);
+        })
+        return async.promise;
+    }
 
     return {
         getActivities: getActivities,
         addNewActivity: addNewActivity,
-        getActivityById:getActivityById
+        getActivityById: getActivityById,
+        getUserActivities: getUserActivities
     }
 })
