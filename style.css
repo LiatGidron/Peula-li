@@ -26,7 +26,7 @@ body {
     max-width: 600px; 
     margin-top: 80px;
     padding: 25px;
-    border: 1px solid #ddd;
+    border: 1px solid rgb(255, 153, 153);
     border-radius: 5px;
 }
 .middle {
@@ -38,7 +38,6 @@ body {
     margin-bottom: 10px;
 }
 .search-box {
-    border: 1px solid #ccc; 
     margin: 10px;
     padding: 10px;
 }
@@ -68,6 +67,9 @@ img.float-right {
 .actName {
     color: rgb(65, 65, 65);
 }
+a.accordion-toggle:hover {
+    color:orangered;
+}
 .rank, .createdBy {
     color: rgb(180, 21, 0);
     font-size: 1rem;
@@ -76,8 +78,23 @@ img.float-right {
     text-decoration: none;
 }
 .act-page-btn {
-    background-color: orangered;
-    border: 2px solid orange;
-    color: black;
+    background-color: rgb(255, 93, 35);
+    border: 1px solid rgb(255, 238, 0);
+    color: rgb(34, 34, 34);
     font-weight: bold;
+}
+nav {
+    margin-bottom: 30px;
+    background: linear-gradient(to bottom, #FFCDA8 -30%, #F7F7F7 40%,#F7F7F7 60%, #FFCDA8 150%);
+    border-bottom: 1px solid rgb(255, 153, 153);
+    border-top: 1px solid rgb(255, 153, 153);
+    font-size: 1.1rem;
+    color: rgb(34, 34, 34);
+}
+.clear-form-btn, .btn-dark {
+    border: 2px solid rgb(255, 94, 0);
+}
+.add-act-btn {
+    background: radial-gradient(ellipse at center, #f7f7f7 0%, rgb(255, 180, 123) 100%);
+    border: 1px solid rgb(255, 153, 153);
 }

@@ -10,4 +10,7 @@ app.controller("navbarCtrl", function($scope, userSrv, $location) {
     $scope.getActiveUser = function(){
         return userSrv.getActiveUser(); 
     }
+    $scope.getClass = function (path) {
+        return ($location.path().substr(0, path.length) === path) ? 'active' : '';
+      }
 }) 
