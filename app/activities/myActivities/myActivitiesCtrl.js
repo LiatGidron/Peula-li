@@ -27,4 +27,5 @@ app.controller("myActivitiesCtrl", function ($scope, activitiesSrv, userSrv,$loc
             $location.path("/activities/" + activityId);
         }
     }
+    // $scope.userFavorites = activitiesSrv.userFavorites; 
 })

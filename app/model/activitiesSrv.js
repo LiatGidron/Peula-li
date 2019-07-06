@@ -105,10 +105,17 @@ app.factory("activitiesSrv", function ($q, $http, userSrv) {
         return async.promise;
     }
 
+    // function getUserFavorites(activity) {
+    //     var userFavorites = [];
+    //     userFavorites.push(activity);
+    //     return userFavorites;
+    // }
+
     return {
         getActivities: getActivities,
         addNewActivity: addNewActivity,
         getActivityById: getActivityById,
         getUserActivities: getUserActivities
+        // getUserFavorites:getUserFavorites
     }
 })

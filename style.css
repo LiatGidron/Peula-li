@@ -54,7 +54,7 @@ label.form-check-label {
 .new-activity-form, .activity-page {
     margin-top: 20px;
 }
-form.new-activity-form > .row, .activity-desc, .activity-page > .row {
+form.new-activity-form > .row, .activity-desc, .activity-page .row {
     margin-top: 10px; 
     margin-bottom: 10px; 
     border-bottom: 1px dashed rgb(255, 153, 153);

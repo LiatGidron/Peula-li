@@ -2,27 +2,41 @@
     <peula-li-navbar></peula-li-navbar>
     <div class="container activity-page">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-10">
                 <h3>{{activity.activityName}}</h3>
             </div>
-            <div class="col-md-8">עורך: {{activity.createdBy}} (מתנועת - {{activity.youthMovement}})</div>
-            <div class="col-md-2">דירוג הפעולה: {{activity.activityRank}}</div>
+            <div class="col-md-2">
+                <p><small>(הוספה למועדפים) </small>
+                    <button ng-click="markAs(activity)" ><i class="fa" ng-class="{'fa-heart' : isFavorite , 'fa-heart-o' : !isFavorite }"></i></button>
+                </p>
+            </div>
         </div>
         <div class="row">
-            <div class="col-md-2">גיל החניכים:</div>
-            <div class="col-md">{{activity.activityAge}}</div>
-        </div>
-        <div class="row">
-            <div class="col-md-2">אורך הפעולה:</div>
-            <div class="col-md">{{activity.activityLength}}</div>
-        </div>
-        <div class="row">
-            <div class="col-md-2">מיקום הפעולה:</div>
-            <div class="col-md">{{activity.activityLocation}}</div>
-        </div>
-        <div class="row">
-            <div class="col-md-2">רמת אקטיביות:</div>
-            <div class="col-md">{{activity.levelOfActive}}</div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-3">עורך:</div>
+                    <div class="col-md">{{activity.createdBy}} (מתנועת - {{activity.youthMovement}})</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">גיל החניכים:</div>
+                    <div class="col-md">{{activity.activityAge}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">אורך הפעולה:</div>
+                    <div class="col-md">{{activity.activityLength}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">מיקום הפעולה:</div>
+                    <div class="col-md">{{activity.activityLocation}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">רמת אקטיביות:</div>
+                    <div class="col-md">{{activity.levelOfActive}}</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md">דירוג הפעולה: {{activity.activityRank}}</div>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-2">תגיות:</div>
@@ -46,7 +60,7 @@
             </div>
         </div>
         <div>
-            <div class="row" ng-repeat = "step in activity.activityFullDesc">
+            <div class="row" ng-repeat="step in activity.activityFullDesc">
                 <div class="col-md-2">שלב {{$index+1}} - אורך:</div>
                 <div class="col-md-1">{{step.stepLength}} <small>דקות</small></div>
                 <div class="col-md-1">תאור:</div>
