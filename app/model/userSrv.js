@@ -62,7 +62,21 @@ app.factory("userSrv", function ($q, $http) {
     function getActiveUser() {
         return activeUser;
     }
-    
+
+    function doesExist(userName) {
+        var async = $q.defer();
+        for (var i = 0; i < users.length; i++) {
+            if (userName === users[i].userName) {
+                x = "exist"
+                async.resolve(x);
+            } else {
+                x = "ok"
+            } 
+        }
+        async.resolve(x);
+        return async.promise;
+    }
+
 
     return {
         isLoggedIn: isLoggedIn,
@@ -70,7 +84,8 @@ app.factory("userSrv", function ($q, $http) {
         logout: logout,
         getActiveUser: getActiveUser,
         addUser: addUser,
-        users:users
+        users: users,
+        doesExist: doesExist
     }
 
 

@@ -5,25 +5,25 @@
         filter: filterByYouthMovement | orderBy : '-activityRank'">
             <uib-accordion-heading>
                 <div class="row">
-                    <div class="col-sm">{{activity.activityName}}</div>
-                    <div class="col-sm">דירוג: {{activity.activityRank}}</div>
-                    <div class="col-sm">עורך: {{activity.createdBy}} ({{activity.youthMovement}})</div>
+                    <div class="col-sm actName">{{activity.activityName}}</div>
+                    <div class="col-sm rank">דירוג: {{activity.activityRank}}</div>
+                    <div class="col-sm createdBy">עורך: {{activity.createdBy}} ({{activity.youthMovement}})</div>
                 </div>
             </uib-accordion-heading>
             <div class="row">
-                <div class="col-sm">גיל: {{activity.activityAge}}</div>
-                <div class="col-sm">אורך: {{activity.activityLength}}</div>
-                <div class="col-sm">מיקום: {{activity.activityLocation}}</div>
-                <div class="col-sm">רמת אקטיביות: {{activity.levelOfActive}}</div>
+                <div class="col-sm"><span class="font-weight-bold">גיל: </span>{{activity.activityAge}}</div>
+                <div class="col-sm"><span class="font-weight-bold">אורך:</span> {{activity.activityLength}}</div>
+                <div class="col-sm"><span class="font-weight-bold">מיקום:</span> {{activity.activityLocation}}</div>
+                <div class="col-sm"><span class="font-weight-bold">רמת אקטיביות:</span> {{activity.levelOfActive}}</div>
                 <div class="col-sm">
-                    <button class="btn btn-success" ng-click="openActivityPage(activity.activityId)">לדף הפעולה</button>
+                    <button class="btn act-page-btn" ng-click="openActivityPage(activity.activityId)">לדף הפעולה</button>
                 </div>
             </div>
             <div class="row middle">
-                <div class="col">{{activity.activityShortDesc}}</div>
+                <div class="col-sm"><span class="font-weight-bold">תאור קצר: </span>{{activity.activityShortDesc}}</div>
             </div>
             <div class="row">
-                <span>&nbsp &nbsp תגיות: &nbsp;</span>
+                <span class="font-weight-bold">&nbsp &nbsp תגיות: &nbsp;</span>
                 <div ng-repeat="tags in activity.activityTags">{{tags}} {{$last ? '' : ', '}}</div>
 
             </div>
