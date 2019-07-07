@@ -14,49 +14,49 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="row">
-                    <div class="col-md-3">עורך:</div>
+                    <div class="col-md-3 text-color-red">עורך:</div>
                     <div class="col-md">{{activity.createdBy}} (מתנועת - {{activity.youthMovement}})</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3">גיל החניכים:</div>
+                    <div class="col-md-3 text-color-red">גיל החניכים:</div>
                     <div class="col-md">{{activity.activityAge}}</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3">אורך הפעולה:</div>
+                    <div class="col-md-3 text-color-red">אורך הפעולה:</div>
                     <div class="col-md">{{activity.activityLength}}</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3">מיקום הפעולה:</div>
+                    <div class="col-md-3 text-color-red">מיקום הפעולה:</div>
                     <div class="col-md">{{activity.activityLocation}}</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3">רמת אקטיביות:</div>
+                    <div class="col-md-3 text-color-red">רמת אקטיביות:</div>
                     <div class="col-md">{{activity.levelOfActive}}</div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="col-md">דירוג הפעולה: {{activity.activityRank|number:1}}<small>/5</small></div>
+            <div class="col-md-4 rank-box">
+                <div class="col-md"><span class="text-color-red">דירוג הפעולה:</span> {{activity.activityRank|number:1}}<small>/5</small></div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-2">תגיות:</div>
+            <div class="col-md-2 text-color-red">תגיות:</div>
             <div ng-repeat="tags in activity.activityTags">&nbsp &nbsp{{tags}} {{$last ? '' : ', '}}</div>
         </div>
         <div class="row">
-            <div class="col-md-2">מטרות הפעולה:</div>
+            <div class="col-md-2 text-color-red">מטרות הפעולה:</div>
             <div class="col-md">{{activity.activityGoals}}</div>
         </div>
         <div class="row">
-            <div class="col-md-2">תאור קצר:</div>
+            <div class="col-md-2 text-color-red">תאור קצר:</div>
             <div class="col-md">{{activity.activityShortDesc}}</div>
         </div>
         <div class="row">
-            <div class="col-md-2">חומר עזר נדרש:</div>
+            <div class="col-md-2 text-color-red">חומר עזר נדרש:</div>
             <div class="col-md">{{activity.activityResources}}</div>
         </div>
         <div>
             <div class="row">
-                <div class="col-md-2">תאור מהלך הפעולה:</div>
+                <div class="col-md-2 text-color-red">תאור מהלך הפעולה:</div>
             </div>
         </div>
         <div>

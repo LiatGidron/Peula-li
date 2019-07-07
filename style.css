@@ -53,7 +53,7 @@ label.form-check-label {
 .new-activity-form, .activity-page {
     margin-top: 20px;
 }
-form.new-activity-form > .row, .activity-desc, .activity-page .row {
+form.new-activity-form > .row, .activity-desc, .activity-page .row:not(:last-child) {
     margin-top: 10px; 
     margin-bottom: 10px; 
     border-bottom: 1px dashed rgb(255, 153, 153);
@@ -108,4 +108,13 @@ nav {
 }
 .fa-heart {
     color:rgb(230, 0, 0);
+}
+.rank-box {
+    border-right:1px dashed rgb(255, 153, 153);
+    border-left:1px dashed rgb(255, 153, 153);
+    margin-bottom: 10px;
+}
+.text-color-red {
+    color: rgb(180, 21, 0);
+    /* font-weight: bold; */
 }
