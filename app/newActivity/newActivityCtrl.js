@@ -20,6 +20,7 @@ app.controller("newActivityCtrl", function($scope, userSrv, activitiesSrv, $log,
             stepDesc:""
         }
     ];
+    $scope.activityRank = [];
     
    $scope.insertStep = function () {
         $scope.activityFullDesc.push( {
@@ -31,7 +32,7 @@ app.controller("newActivityCtrl", function($scope, userSrv, activitiesSrv, $log,
     $scope.addActivity = function() {
         activitiesSrv.addNewActivity($scope.activityName, $scope.activityAge, $scope.activityLength, 
             $scope.activityLocation, $scope.levelOfActive, $scope.activityGoals, $scope.shortDesc, 
-            $scope.activityFullDesc, $scope.activityResources, $scope.extFiles, $scope.activityTags).then(function(newActivity){
+            $scope.activityFullDesc, $scope.activityResources, $scope.extFiles, $scope.activityTags, $scope.activityRank).then(function(newActivity){
             $log.info("new activity added: " + JSON.stringify(newActivity));
             $location.path("/activities");
         })

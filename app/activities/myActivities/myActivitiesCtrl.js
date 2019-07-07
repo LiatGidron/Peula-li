@@ -1,4 +1,4 @@
-app.controller("myActivitiesCtrl", function ($scope, activitiesSrv, userSrv,$location) {
+app.controller("myActivitiesCtrl", function ($scope, activitiesSrv, userSrv, $location) {
 
     $scope.isLoggedIn = function () {
         return userSrv.isLoggedIn();
@@ -13,6 +13,7 @@ app.controller("myActivitiesCtrl", function ($scope, activitiesSrv, userSrv,$loc
     activitiesSrv.getUserActivities().then(function (userActivities) {
         $scope.activities = userActivities;
     })
+
     $scope.openModal = function () {
         $uibModal.open({
             templateUrl: "app/activities/modal/needToLoginModal.html",
@@ -27,5 +28,12 @@ app.controller("myActivitiesCtrl", function ($scope, activitiesSrv, userSrv,$loc
             $location.path("/activities/" + activityId);
         }
     }
-    // $scope.userFavorites = activitiesSrv.userFavorites; 
+
+    // $scope.getUserFavArr() = function(){
+    //     return activitiesSrv.getUserFavArr();
+    // }
+
+    activitiesSrv.getUserFavAct().then(function (userFavAct) {
+        $scope.userFavAct = userFavAct;
+    });
 })

@@ -4,5 +4,39 @@
         <h3>שלום {{getActiveUser().fname}} - כל הפעולות שהוספת נמצאות כאן - </h3>
         <activities-list></activities-list>
     </div>
-
+    <div class="container">
+        <h3>שלום {{getActiveUser().fname}} - כל הפעולות המועדפות שלך נמצאות כאן - </h3>
+        <div class="container activities-list">
+            <uib-accordion close-others="oneAtATime">
+                <div uib-accordion-group class="mt-1" ng-repeat="activity in userFavAct | filter : filterBySubject |
+                filter:filterByLength| filter: filterByLocation | filter: filterByAge | filter: filterByLevelOfActive | 
+                filter: filterByYouthMovement | orderBy : '-activityRank'">
+                    <uib-accordion-heading>
+                        <div class="row">
+                            <div class="col-md-7 actName">{{activity.activityName}}</div>
+                            <div class="col-md-2 rank">דירוג: &nbsp {{activity.activityRank | number:1}}<small>/5</small></div>
+                            <div class="col-md-3 createdBy">עורך: {{activity.createdBy}} ({{activity.youthMovement}})</div>
+                        </div>
+                    </uib-accordion-heading>
+                    <div class="row">
+                        <div class="col-sm"><span class="font-weight-bold">גיל: </span>{{activity.activityAge}}</div>
+                        <div class="col-sm"><span class="font-weight-bold">אורך:</span> {{activity.activityLength}}</div>
+                        <div class="col-sm"><span class="font-weight-bold">מיקום:</span> {{activity.activityLocation}}</div>
+                        <div class="col-sm"><span class="font-weight-bold">רמת אקטיביות:</span> {{activity.levelOfActive}}</div>
+                        <div class="col-sm">
+                            <button class="btn act-page-btn" ng-click="openActivityPage(activity.activityId)">לדף הפעולה</button>
+                        </div>
+                    </div>
+                    <div class="row middle">
+                        <div class="col-sm"><span class="font-weight-bold">תאור קצר: </span>{{activity.activityShortDesc}}</div>
+                    </div>
+                    <div class="row">
+                        <span class="font-weight-bold">&nbsp &nbsp תגיות: &nbsp;</span>
+                        <div ng-repeat="tags in activity.activityTags">{{tags}} {{$last ? '' : ', '}}</div>
+        
+                    </div>
+                </div>
+            </uib-accordion>
+        </div>
+    </div>
 </div>

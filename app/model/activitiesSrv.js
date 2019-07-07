@@ -1,4 +1,4 @@
-app.factory("activitiesSrv", function ($q, $http, userSrv) {
+app.factory("activitiesSrv", function ($q, $http, userSrv, $log) {
 
     var activities = [];
     var wasEverLoadedFromJSON = false;
@@ -56,7 +56,7 @@ app.factory("activitiesSrv", function ($q, $http, userSrv) {
     }
 
     function addNewActivity(activityName, activityAge, activityLength, activityLocation, levelOfActive, activityGoals,
-        activityShortDesc, activityFullDesc, activityResources, activityExtFiles, activityTags) {
+        activityShortDesc, activityFullDesc, activityResources, activityExtFiles, activityTags, activityRank) {
         var async = $q.defer();
         var activeUserName = userSrv.getActiveUser().userName;
         var userYouthMovement = userSrv.getActiveUser().youthMovement;
@@ -74,7 +74,8 @@ app.factory("activitiesSrv", function ($q, $http, userSrv) {
             "activityResources": activityResources,
             "activityExtFiles": activityExtFiles,
             "activityTags": activityTags.split(','),
-            "youthMovement": userYouthMovement
+            "youthMovement": userYouthMovement,
+            "activityRank": activityRank
         }
         var newActivity = new Activity(plainActivity);
         activities.push(newActivity);
@@ -114,17 +115,61 @@ app.factory("activitiesSrv", function ($q, $http, userSrv) {
         return async.promise;
     }
 
-    // function getUserFavorites(activity) {
-    //     var userFavorites = [];
-    //     userFavorites.push(activity);
-    //     return userFavorites;
+
+
+    function userFav(activityId) {
+        var userFavArray = userSrv.getActiveUser().favorites;
+        if (userFavArray.includes(parseInt(activityId))) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    var userFavArray = [];
+
+    function markAs(activityId) {
+        var userFavArray = userSrv.getActiveUser().favorites;
+        if (userFavArray.includes(parseInt(activityId))) {
+            userFavArray.splice(userFavArray.indexOf(parseInt(activityId)), 1);
+            userFav = false;
+        } else {
+            userFavArray.push(parseInt(activityId));
+            $log.info(userFavArray);
+            userFav = true;
+        }
+    }
+    // function getUserFavArr() {
+    //     return userFavArray;
     // }
+
+    function getUserFavAct() {
+        var async = $q.defer();
+        var userFavArray = userSrv.getActiveUser().favorites;
+        var userFavActivities = [];
+        getActivities().then(function (activities) {
+            for (var j = 0; j < userFavArray.length; j++) {
+                for (var i = 0; i < activities.length; i++) {
+                    if (activities[i].activityId === userFavArray[j]) {
+                        userFavActivities.push(activities[i]);
+                    }
+                }
+            }
+            async.resolve(userFavActivities);
+        }, function (err) {
+            async.reject(err);
+        })
+        return async.promise;
+    }
 
     return {
         getActivities: getActivities,
         addNewActivity: addNewActivity,
         getActivityById: getActivityById,
-        getUserActivities: getUserActivities
-        // getUserFavorites:getUserFavorites
+        getUserActivities: getUserActivities,
+        userFav: userFav,
+        markAs: markAs,
+        // getUserFavArr: getUserFavArr,
+        getUserFavAct: getUserFavAct
     }
 })
