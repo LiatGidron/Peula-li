@@ -20,18 +20,27 @@ app.factory("activitiesSrv", function ($q, $http, userSrv, $log) {
         this.activityExtFiles = act.activityExtFiles;
         this.activityGeoLocation = act.activityGeoLocation;
         this.activityTags = act.activityTags;
-        this.activityRank = calcRank(act.activityRank);
+        this.activityRank = act.activityRank;
         this.youthMovement = act.youthMovement;
     }
 
-    function calcRank(ranks) {
+    Activity.prototype.rankAvrg = function () {
+        var ranks = this.activityRank;
         var sum = 0;
         for (var j = 0; j < ranks.length; j++) {
             sum += ranks[j];
         }
         actAverageRank = sum / ranks.length;
         return actAverageRank;
-    }
+    };
+    // function calcRank(ranks) {
+    //     var sum = 0;
+    //     for (var j = 0; j < ranks.length; j++) {
+    //         sum += ranks[j];
+    //     }
+    //     actAverageRank = sum / ranks.length;
+    //     return actAverageRank;
+    // }
 
     function getActivities() {
         var async = $q.defer();
