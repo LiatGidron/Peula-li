@@ -103,3 +103,6 @@ nav {
     border-bottom: 1px solid rgb(255, 153, 153);
     border-top: 1px solid rgb(255, 153, 153);
 }
+.act-list-in-my-act {
+    margin-bottom: 50px; 
+}
