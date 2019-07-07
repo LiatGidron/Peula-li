@@ -16,7 +16,7 @@
                             <div class="row">
                                 <div class="col-md-7 actName">{{activity.activityName}}</div>
                                 <div class="col-md-2 rank">דירוג: &nbsp
-                                    {{activity.activityRank | number:1}}<small>/5</small></div>
+                                    {{activity.rankAvrg() | number:1}}<small>/5</small></div>
                                 <div class="col-md-3 createdBy">עורך: {{activity.createdBy}}
                                     ({{activity.youthMovement}})</div>
                             </div>
