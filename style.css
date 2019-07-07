@@ -106,3 +106,7 @@ nav {
 .act-list-in-my-act {
     margin-bottom: 50px; 
 }
+.fa-heart {
+    color:rgb(230, 0, 0);
+    /* font-size: 1.2rem; */
+}
