@@ -8,6 +8,7 @@ app.factory("userSrv", function ($q, $http) {
         this.email = plainUser.email;
         this.pwd = plainUser.pwd;
         this.youthMovement = plainUser.youthMovement;
+        this.favorites = plainUser.favorites;
     }
 
     var users = [];
@@ -16,7 +17,7 @@ app.factory("userSrv", function ($q, $http) {
     });
 
 
-    function addUser(userName, fname, lname, email, pwd, youthMovement) {
+    function addUser(userName, fname, lname, email, pwd, youthMovement,favorites) {
         var async = $q.defer();
         var plainUser = {
             "userName": userName,
@@ -24,7 +25,8 @@ app.factory("userSrv", function ($q, $http) {
             "lname": lname,
             "email": email,
             "pwd": pwd,
-            "youthMovement": youthMovement
+            "youthMovement": youthMovement,
+            "favorites":favorites
         }
         var newUser = new User(plainUser);
         users.push(newUser);
@@ -63,10 +65,10 @@ app.factory("userSrv", function ($q, $http) {
         return activeUser;
     }
 
-    function doesExist(userName) {
+    function doesExist(email, userName) {
         var async = $q.defer();
         for (var i = 0; i < users.length; i++) {
-            if (userName === users[i].userName) {
+            if (userName === users[i].userName || email === users[i].email) {
                 x = "exist"
                 async.resolve(x);
             } else {

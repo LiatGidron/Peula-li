@@ -98,3 +98,8 @@ nav {
     background: radial-gradient(ellipse at center, #f7f7f7 0%, rgb(255, 180, 123) 100%);
     border: 1px solid rgb(255, 153, 153);
 }
+.jumbotron {
+    background: linear-gradient(to bottom, #FFCDA8 -30%, #F7F7F7 40%,#F7F7F7 60%, #FFCDA8 150%);
+    border-bottom: 1px solid rgb(255, 153, 153);
+    border-top: 1px solid rgb(255, 153, 153);
+}

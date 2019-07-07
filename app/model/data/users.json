@@ -6,7 +6,8 @@
         "email": "gidron.liat@gmail.com",
         "pwd": "123",
         "youthMovement": "הצופים",
-        "userRank" : ""
+        "userRank" : "",
+        "favorites" : [1,2]
     },
     {
         "userName": "אורי.גדרון",
@@ -15,6 +16,7 @@
         "email": "ori.gdr22@gmail.com",
         "pwd": "123",
         "youthMovement": "חוגי סיור",
-        "userRank" : ""
+        "userRank" : "",
+        "favorites": [0,4]
     }
 ] 
