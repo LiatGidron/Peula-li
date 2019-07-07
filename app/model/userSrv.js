@@ -1,4 +1,4 @@
-app.factory("userSrv", function ($q, $http) {
+app.factory("userSrv", function ($q, $http, $log) {
     var activeUser = null;
 
     function User(plainUser) {
@@ -79,6 +79,27 @@ app.factory("userSrv", function ($q, $http) {
         return async.promise;
     }
 
+    function userFav(activityId) {
+        var userFavArray = getActiveUser().favorites;
+        if (userFavArray.includes(parseInt(activityId))) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function markAs(activityId) {
+        var userFavArray = getActiveUser().favorites;
+        if (userFavArray.includes(parseInt(activityId))) {
+            userFavArray.splice(userFavArray.indexOf(parseInt(activityId)), 1);
+            userFav = false;
+        } else {
+            userFavArray.push(parseInt(activityId));
+            $log.info(userFavArray);
+            userFav = true;
+        }
+    }
+
 
     return {
         isLoggedIn: isLoggedIn,
@@ -87,7 +108,9 @@ app.factory("userSrv", function ($q, $http) {
         getActiveUser: getActiveUser,
         addUser: addUser,
         users: users,
-        doesExist: doesExist
+        doesExist: doesExist,
+        userFav:userFav,
+        markAs:markAs
     }
 
 

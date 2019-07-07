@@ -115,34 +115,6 @@ app.factory("activitiesSrv", function ($q, $http, userSrv, $log) {
         return async.promise;
     }
 
-
-
-    function userFav(activityId) {
-        var userFavArray = userSrv.getActiveUser().favorites;
-        if (userFavArray.includes(parseInt(activityId))) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    var userFavArray = [];
-
-    function markAs(activityId) {
-        var userFavArray = userSrv.getActiveUser().favorites;
-        if (userFavArray.includes(parseInt(activityId))) {
-            userFavArray.splice(userFavArray.indexOf(parseInt(activityId)), 1);
-            userFav = false;
-        } else {
-            userFavArray.push(parseInt(activityId));
-            $log.info(userFavArray);
-            userFav = true;
-        }
-    }
-    // function getUserFavArr() {
-    //     return userFavArray;
-    // }
-
     function getUserFavAct() {
         var async = $q.defer();
         var userFavArray = userSrv.getActiveUser().favorites;
@@ -167,9 +139,8 @@ app.factory("activitiesSrv", function ($q, $http, userSrv, $log) {
         addNewActivity: addNewActivity,
         getActivityById: getActivityById,
         getUserActivities: getUserActivities,
-        userFav: userFav,
-        markAs: markAs,
-        // getUserFavArr: getUserFavArr,
+        // userFav: userFav
+        // markAs: markAs,
         getUserFavAct: getUserFavAct
     }
 })

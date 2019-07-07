@@ -29,10 +29,6 @@ app.controller("myActivitiesCtrl", function ($scope, activitiesSrv, userSrv, $lo
         }
     }
 
-    // $scope.getUserFavArr() = function(){
-    //     return activitiesSrv.getUserFavArr();
-    // }
-
     activitiesSrv.getUserFavAct().then(function (userFavAct) {
         $scope.userFavAct = userFavAct;
     });
