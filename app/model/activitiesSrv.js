@@ -1,4 +1,4 @@
-app.factory("activitiesSrv", function ($q, $http, userSrv, $log) {
+app.factory("activitiesSrv", function ($q, $http, userSrv) {
 
     var activities = [];
     var wasEverLoadedFromJSON = false;
@@ -31,16 +31,14 @@ app.factory("activitiesSrv", function ($q, $http, userSrv, $log) {
             sum += ranks[j];
         }
         actAverageRank = sum / ranks.length;
-        return actAverageRank;
+        if (actAverageRank > 0) {
+            return actAverageRank;
+        }
+        else {
+            return 0;
+        }
     };
-    // function calcRank(ranks) {
-    //     var sum = 0;
-    //     for (var j = 0; j < ranks.length; j++) {
-    //         sum += ranks[j];
-    //     }
-    //     actAverageRank = sum / ranks.length;
-    //     return actAverageRank;
-    // }
+
 
     function getActivities() {
         var async = $q.defer();
@@ -148,8 +146,6 @@ app.factory("activitiesSrv", function ($q, $http, userSrv, $log) {
         addNewActivity: addNewActivity,
         getActivityById: getActivityById,
         getUserActivities: getUserActivities,
-        // userFav: userFav
-        // markAs: markAs,
         getUserFavAct: getUserFavAct
     }
 })
