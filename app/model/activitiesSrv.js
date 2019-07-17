@@ -141,11 +141,24 @@ app.factory("activitiesSrv", function ($q, $http, userSrv) {
         return async.promise;
     }
 
+    function updateRank(activityId, rank) {
+        var async = $q.defer();
+        getActivityById(activityId).then(function (activity){
+            var ranks = activity.activityRank;
+            ranks.push(rank);
+            async.resolve(activity.rankAvrg());  
+        }, function (err) {
+            async.reject(err);
+        })
+        return async.promise;
+    }
+
     return {
         getActivities: getActivities,
         addNewActivity: addNewActivity,
         getActivityById: getActivityById,
         getUserActivities: getUserActivities,
-        getUserFavAct: getUserFavAct
+        getUserFavAct: getUserFavAct,
+        updateRank:updateRank
     }
 })

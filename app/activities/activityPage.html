@@ -7,7 +7,8 @@
             </div>
             <div class="col-md-1">
                 <p>
-                    <button ng-click="markAs()" ><i class="fa" ng-class="userFav ? 'fa-heart' : 'fa-heart-o'"></i></button>
+                    <button ng-click="markAs()"><i class="fa"
+                            ng-class="userFav ? 'fa-heart' : 'fa-heart-o'"></i></button>
                 </p>
             </div>
         </div>
@@ -35,7 +36,11 @@
                 </div>
             </div>
             <div class="col-md-4 rank-box">
-                <div class="col-md"><span class="text-color-red">דירוג הפעולה:</span> {{activity.rankAvrg()|number:1}}<small>/5</small></div>
+                <div class="col-md"><span class="text-color-red">דירוג הפעולה:</span>
+                    {{activity.rankAvrg()|number:1}}<small>/5</small></div>
+                <div starating></div>
+                <div ng-show="rating>0">הדירוג הנבחר {{rating}}</div>
+                <button class="btn btn-dark" ng-click="addRank(rating)">שלח דרוג</button>
             </div>
         </div>
         <div class="row">

@@ -16,4 +16,8 @@ app.controller("activityPageCtrl", function (activitiesSrv, $scope, $log, $route
         $scope.userFav = userSrv.userFav($routeParams.id);
     };
 
+    
+    $scope.addRank = function (rate) {
+        activitiesSrv.updateRank($routeParams.id, rate);
+    }
 })
