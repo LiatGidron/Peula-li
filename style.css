@@ -118,3 +118,13 @@ nav {
     color: rgb(180, 21, 0);
     /* font-weight: bold; */
 }
+span.ng-scope {
+    font-size: 1.3rem;
+}
+span.fa.fa-star {
+    -webkit-text-fill-color: #ff5d23;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;   
+    text-shadow: 0 0 3px rgb(46, 45, 45);
+
+}
